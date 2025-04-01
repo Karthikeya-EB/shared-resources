@@ -1,0 +1,400 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+/* --- CSS Variables (Based on Brand Guidelines) --- */
+:root {
+    /* Primary Colors */
+    --eb-white: #FFFFFF;
+    --eb-light-blue: #6CB6FF;
+    --eb-medium-blue: #0B6FE9; /* Primary Interactive Color */
+    --eb-dark-blue: #0060BF;
+    --eb-dark-navy: #1B2833; /* Primary Text & Dark Backgrounds */
+
+    /* Secondary Colors */
+    --eb-beige: #F2E9E2;
+    --eb-grey: #CABEB5; /* Can be used for borders, disabled states */
+    --eb-orange: #F97838; /* Accent color */
+
+    /* Supporting Colors */
+    --eb-text-primary: var(--eb-dark-navy);
+    --eb-text-secondary: #555f68; /* Slightly lighter for descriptions */
+    --eb-text-light: var(--eb-light-blue); /* For dark backgrounds */
+    --eb-text-white: var(--eb-white);
+    --eb-border-color: #DDE2E7; /* Subtle border for inputs/cards */
+    --eb-background-light: var(--eb-white);
+    --eb-background-dark: var(--eb-dark-navy);
+    --eb-background-hover-light: #f8f9fa; /* Subtle hover for light elements */
+    --eb-disabled-bg: #E9ECEF;
+    --eb-disabled-text: #ADB5BD;
+
+    /* Typography */
+    --eb-font-family: 'Quicksand', sans-serif;
+    --eb-font-weight-regular: 400;
+    --eb-font-weight-medium: 500;
+    --eb-font-weight-bold: 700;
+
+    /* Sizing & Spacing */
+    --eb-border-radius: 6px; /* Subtle rounding */
+    --eb-spacing-small: 8px;
+    --eb-spacing-medium: 16px;
+    --eb-spacing-large: 24px;
+    --eb-spacing-xlarge: 32px;
+
+    /* Transitions */
+    --eb-transition: all 0.2s ease-in-out;
+}
+
+/* --- Global Resets & Base Styles --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--eb-font-family);
+    font-size: 16px; /* Base font size */
+    line-height: 1.6;
+    color: var(--eb-text-primary);
+    background-color: var(--eb-background-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 960px;
+    margin: var(--eb-spacing-xlarge) auto;
+    padding: 0 var(--eb-spacing-medium);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--eb-border-color);
+    margin: var(--eb-spacing-medium) 0 var(--eb-spacing-large);
+}
+
+section.component-section {
+    margin-bottom: var(--eb-spacing-xlarge);
+    padding: var(--eb-spacing-large);
+    background-color: #fdfdff; /* Slightly off-white */
+    border: 1px solid #f0f0f5;
+    border-radius: var(--eb-border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+/* --- Title Header (Mimicking Slide 1) --- */
+.title-header {
+    background-color: var(--eb-background-dark);
+    color: var(--eb-text-light);
+    text-align: center;
+    padding: 60px var(--eb-spacing-medium);
+    margin-bottom: var(--eb-spacing-xlarge);
+}
+
+.title-header h1 {
+    font-size: 3.5rem; /* Large size like title slide */
+    font-weight: var(--eb-font-weight-regular); /* Title slide looks lighter */
+    margin-bottom: var(--eb-spacing-small);
+}
+
+.title-header p {
+    font-size: 1.1rem;
+    color: var(--eb-light-blue);
+    opacity: 0.8;
+}
+
+
+/* --- Typography --- */
+h1, .eb-h1,
+h2, .eb-h2,
+h3, .eb-h3,
+h4, .eb-h4 {
+    font-family: var(--eb-font-family);
+    color: var(--eb-text-primary);
+    margin-bottom: var(--eb-spacing-medium);
+    line-height: 1.3;
+}
+
+/* Hierarchy approx Golden Ratio (Base 16px) */
+h1, .eb-h1 { font-size: 2.618rem; font-weight: var(--eb-font-weight-bold); } /* ~42px */
+h2, .eb-h2 { font-size: 1.618rem; font-weight: var(--eb-font-weight-bold); } /* ~26px */
+h3, .eb-h3 { font-size: 1.25rem; font-weight: var(--eb-font-weight-bold); } /* ~20px */
+h4, .eb-h4 { font-size: 1.0rem; font-weight: var(--eb-font-weight-medium); } /* ~16px */
+
+p, .eb-body {
+    font-size: 1rem; /* 16px */
+    font-weight: var(--eb-font-weight-regular);
+    color: var(--eb-text-secondary);
+    margin-bottom: var(--eb-spacing-medium);
+}
+
+.eb-body-small {
+    font-size: 0.875rem; /* 14px */
+    font-weight: var(--eb-font-weight-regular);
+    color: var(--eb-text-secondary);
+    margin-bottom: var(--eb-spacing-medium);
+}
+
+/* --- Links --- */
+a, .eb-link {
+    color: var(--eb-medium-blue);
+    text-decoration: none;
+    font-weight: var(--eb-font-weight-medium);
+    transition: var(--eb-transition);
+}
+
+a:hover, .eb-link:hover {
+    color: var(--eb-dark-blue);
+    text-decoration: underline;
+}
+
+.eb-link-arrow {
+    color: var(--eb-medium-blue);
+    text-decoration: none;
+    font-weight: var(--eb-font-weight-medium);
+    transition: var(--eb-transition);
+}
+.eb-link-arrow i {
+    margin-left: 4px;
+    transition: var(--eb-transition);
+}
+.eb-link-arrow:hover {
+    color: var(--eb-dark-blue);
+    text-decoration: none;
+}
+.eb-link-arrow:hover i {
+    transform: translateX(3px);
+}
+
+
+/* --- Buttons --- */
+.eb-btn {
+    display: inline-block;
+    font-family: var(--eb-font-family);
+    font-size: 1rem;
+    font-weight: var(--eb-font-weight-medium);
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: var(--eb-border-radius);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: var(--eb-transition);
+    margin: 5px; /* Add some space between buttons */
+}
+
+.eb-btn-primary {
+    background-color: var(--eb-medium-blue);
+    color: var(--eb-text-white);
+    border-color: var(--eb-medium-blue);
+}
+.eb-btn-primary:hover:not(:disabled) {
+    background-color: var(--eb-dark-blue);
+    border-color: var(--eb-dark-blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eb-btn-secondary {
+    background-color: var(--eb-white);
+    color: var(--eb-medium-blue);
+    border-color: var(--eb-medium-blue);
+}
+.eb-btn-secondary:hover:not(:disabled) {
+    background-color: var(--eb-medium-blue);
+    color: var(--eb-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eb-btn-tertiary {
+    background-color: transparent;
+    color: var(--eb-text-secondary);
+    border-color: var(--eb-border-color);
+}
+.eb-btn-tertiary:hover:not(:disabled) {
+    background-color: var(--eb-background-hover-light);
+    border-color: var(--eb-grey);
+    color: var(--eb-text-primary);
+}
+
+/* Disabled State */
+.eb-btn:disabled {
+    background-color: var(--eb-disabled-bg);
+    color: var(--eb-disabled-text);
+    border-color: var(--eb-disabled-bg);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.eb-btn-secondary:disabled {
+    background-color: var(--eb-white);
+    border-color: var(--eb-disabled-bg);
+    color: var(--eb-disabled-text);
+}
+
+
+/* --- Form Fields --- */
+.eb-form-group {
+    margin-bottom: var(--eb-spacing-large);
+}
+
+.eb-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: var(--eb-font-weight-medium);
+    color: var(--eb-text-primary);
+    margin-bottom: var(--eb-spacing-small);
+}
+
+.eb-input,
+.eb-select,
+.eb-textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    font-family: var(--eb-font-family);
+    font-size: 1rem;
+    font-weight: var(--eb-font-weight-regular);
+    line-height: 1.5;
+    color: var(--eb-text-primary);
+    background-color: var(--eb-white);
+    background-clip: padding-box;
+    border: 1px solid var(--eb-border-color);
+    border-radius: var(--eb-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.eb-input::placeholder,
+.eb-textarea::placeholder {
+    color: var(--eb-grey);
+    opacity: 1;
+}
+
+.eb-input:focus,
+.eb-select:focus,
+.eb-textarea:focus {
+    border-color: var(--eb-medium-blue);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(11, 111, 233, 0.25); /* Use medium blue with alpha */
+}
+
+.eb-select {
+    appearance: none; /* Remove default arrow */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+
+.eb-textarea {
+    resize: vertical; /* Allow vertical resize only */
+}
+
+/* Checkbox & Radio Groups */
+.eb-checkbox-group,
+.eb-radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--eb-spacing-small);
+}
+
+.eb-checkbox,
+.eb-radio {
+    margin-right: var(--eb-spacing-small);
+    accent-color: var(--eb-medium-blue); /* Style check/radio fill */
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.eb-checkbox-group label,
+.eb-radio-group label {
+    margin-bottom: 0; /* Override default label margin */
+    font-weight: var(--eb-font-weight-regular);
+    cursor: pointer;
+}
+
+
+/* --- Cards (from Dashboard Screenshot) --- */
+.eb-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--eb-spacing-large);
+}
+
+.eb-card {
+    background-color: var(--eb-white);
+    border: 1px solid var(--eb-border-color);
+    border-radius: var(--eb-border-radius);
+    padding: var(--eb-spacing-large);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: var(--eb-transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.eb-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.eb-card-icon {
+    font-size: 1.8rem;
+    color: var(--eb-medium-blue);
+    margin-bottom: var(--eb-spacing-medium);
+    width: 40px; /* Fixed width for alignment */
+}
+
+.eb-card-title {
+    font-size: 1.1rem; /* Slightly smaller than H3 */
+    font-weight: var(--eb-font-weight-bold);
+    color: var(--eb-text-primary);
+    margin-bottom: var(--eb-spacing-small);
+}
+
+.eb-card-description {
+    font-size: 0.9rem;
+    color: var(--eb-text-secondary);
+    margin-bottom: var(--eb-spacing-medium);
+    flex-grow: 1; /* Pushes link to bottom */
+}
+
+.eb-card .eb-link-arrow {
+    margin-top: auto; /* Align to bottom */
+}
+
+/* --- Color Palette Visualization --- */
+.color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--eb-spacing-large);
+}
+
+.color-swatch-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.color-swatch-group h4 {
+    margin-bottom: var(--eb-spacing-medium);
+    font-weight: var(--eb-font-weight-medium);
+    border-bottom: 1px solid var(--eb-border-color);
+    padding-bottom: var(--eb-spacing-small);
+}
+
+.color-swatch {
+    padding: var(--eb-spacing-large) var(--eb-spacing-medium);
+    margin-bottom: var(--eb-spacing-small);
+    border-radius: var(--eb-border-radius);
+    color: var(--eb-white); /* Default text color for swatches */
+    font-weight: var(--eb-font-weight-medium);
+    font-size: 0.9rem;
+}
+
+.color-swatch span {
+    background-color: rgba(0, 0, 0, 0.2); /* Slight background for better readability */
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+}

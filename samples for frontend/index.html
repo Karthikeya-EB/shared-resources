@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcomBuddha Brand Components</title>
+    <!-- Google Font: Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Font Awesome for Icons (like in the dashboard screenshot) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section - Mimicking Title Slide -->
+    <header class="title-header">
+        <h1>EcomBuddha</h1>
+        <p>Brand Guideline Components Demo</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Headings Section -->
+        <section class="component-section">
+            <h2>01 Typography & Headings</h2>
+            <hr>
+            <h1 class="eb-h1">H1 Title - Quicksand Bold</h1>
+            <h2 class="eb-h2">H2 Heading - Quicksand Bold</h2>
+            <h3 class="eb-h3">H3 Subheading - Quicksand Medium/Bold</h3>
+            <h4 class="eb-h4">H4 Smaller Heading - Quicksand Medium</h4>
+            <p class="eb-body">
+                This is standard body text (Quicksand Regular). Lorem ipsum dolor sit amet consectetur. Ultricies nibh adipiscing viverra sem dolor. Malesuada auctor malesuada mattis venenatis arcu id lorem nisl iaculis. Consectetur in ridiculus neque at. Id volutpat amet in purus nulla.
+            </p>
+            <p class="eb-body-small">
+                This is slightly smaller body text, potentially used for captions or less important details.
+            </p>
+        </section>
+
+        <!-- Buttons Section -->
+        <section class="component-section">
+            <h2>02 Buttons & Links</h2>
+            <hr>
+            <button class="eb-btn eb-btn-primary">Primary Action</button>
+            <button class="eb-btn eb-btn-secondary">Secondary Action</button>
+            <button class="eb-btn eb-btn-tertiary">Tertiary Action</button>
+            <br><br>
+            <a href="#" class="eb-link">This is a standard link</a>
+            <br>
+            <a href="#" class="eb-link-arrow">Link with Arrow <i class="fas fa-arrow-right"></i></a>
+            <br>
+            <button class="eb-btn eb-btn-primary" disabled>Disabled Primary</button>
+            <button class="eb-btn eb-btn-secondary" disabled>Disabled Secondary</button>
+
+        </section>
+
+        <!-- Form Fields Section -->
+        <section class="component-section">
+            <h2>03 Form Fields</h2>
+            <hr>
+            <form class="eb-form">
+                <div class="eb-form-group">
+                    <label for="text-input" class="eb-label">Text Input Label</label>
+                    <input type="text" id="text-input" class="eb-input" placeholder="Enter text here...">
+                </div>
+
+                <div class="eb-form-group">
+                    <label for="select-input" class="eb-label">Select Dropdown</label>
+                    <select id="select-input" class="eb-select">
+                        <option value="">Please select an option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+
+                <div class="eb-form-group">
+                    <label for="textarea-input" class="eb-label">Textarea</label>
+                    <textarea id="textarea-input" class="eb-textarea" rows="4" placeholder="Enter multiple lines of text..."></textarea>
+                </div>
+
+                <div class="eb-form-group">
+                    <label class="eb-label">Checkboxes</label>
+                    <div class="eb-checkbox-group">
+                        <input type="checkbox" id="check1" class="eb-checkbox">
+                        <label for="check1">Checkbox Option One</label>
+                    </div>
+                    <div class="eb-checkbox-group">
+                        <input type="checkbox" id="check2" class="eb-checkbox" checked>
+                        <label for="check2">Checkbox Option Two (checked)</label>
+                    </div>
+                </div>
+
+                 <div class="eb-form-group">
+                    <label class="eb-label">Radio Buttons</label>
+                    <div class="eb-radio-group">
+                        <input type="radio" id="radio1" name="radio-group" class="eb-radio">
+                        <label for="radio1">Radio Option A</label>
+                    </div>
+                    <div class="eb-radio-group">
+                        <input type="radio" id="radio2" name="radio-group" class="eb-radio" checked>
+                        <label for="radio2">Radio Option B (selected)</label>
+                    </div>
+                </div>
+
+                 <div class="eb-form-group">
+                     <button type="submit" class="eb-btn eb-btn-primary">Submit Form</button>
+                 </div>
+            </form>
+        </section>
+
+        <!-- Card Section (mimicking dashboard) -->
+        <section class="component-section">
+            <h2>04 Cards</h2>
+            <hr>
+            <div class="eb-card-grid">
+                 <div class="eb-card">
+                     <div class="eb-card-icon">
+                         <i class="fas fa-file-alt"></i> <!-- Example Icon -->
+                     </div>
+                     <h3 class="eb-card-title">Single Listing Generator</h3>
+                     <p class="eb-card-description">Generate a complete, optimized listing for one product.</p>
+                     <a href="#" class="eb-link-arrow">Start Generating <i class="fas fa-arrow-right"></i></a>
+                 </div>
+
+                 <div class="eb-card">
+                     <div class="eb-card-icon">
+                         <i class="fas fa-copy"></i> <!-- Example Icon -->
+                     </div>
+                     <h3 class="eb-card-title">Bulk Listing Generator</h3>
+                     <p class="eb-card-description">Upload a CSV to generate multiple listings simultaneously.</p>
+                     <a href="#" class="eb-link-arrow">Start Generating <i class="fas fa-arrow-right"></i></a>
+                 </div>
+
+                 <div class="eb-card">
+                     <div class="eb-card-icon">
+                         <i class="fas fa-image"></i> <!-- Example Icon -->
+                     </div>
+                     <h3 class="eb-card-title">Infographic Image Generator</h3>
+                     <p class="eb-card-description">Create informative images from product features (Single/Bulk).</p>
+                     <a href="#" class="eb-link-arrow">Start Generating <i class="fas fa-arrow-right"></i></a>
+                 </div>
+
+                 <div class="eb-card">
+                     <div class="eb-card-icon">
+                         <i class="fas fa-pencil-alt"></i> <!-- Example Icon -->
+                     </div>
+                     <h3 class="eb-card-title">Product Copy Generator</h3>
+                     <p class="eb-card-description">Generate just the text copy (titles, bullets, description) (Single/Bulk).</p>
+                     <a href="#" class="eb-link-arrow">Start Generating <i class="fas fa-arrow-right"></i></a>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Color Palette -->
+        <section class="component-section">
+             <h2>05 Color Palette</h2>
+             <hr>
+             <div class="color-palette">
+                 <div class="color-swatch-group">
+                     <h4>Primary Colors</h4>
+                     <div class="color-swatch" style="background-color: var(--eb-white); border: 1px solid #eee;"><span style="color: #333;">#FFFFFF (White)</span></div>
+                     <div class="color-swatch" style="background-color: var(--eb-light-blue);"><span>#6CB6FF</span></div>
+                     <div class="color-swatch" style="background-color: var(--eb-medium-blue);"><span>#0B6FE9</span></div>
+                     <div class="color-swatch" style="background-color: var(--eb-dark-blue);"><span>#0060BF</span></div>
+                     <div class="color-swatch" style="background-color: var(--eb-dark-navy);"><span>#1B2833 (Dark Navy)</span></div>
+                 </div>
+                 <div class="color-swatch-group">
+                     <h4>Secondary Colors</h4>
+                     <div class="color-swatch" style="background-color: var(--eb-beige); border: 1px solid #eee;"><span style="color: #333;">#F2E9E2</span></div>
+                     <div class="color-swatch" style="background-color: var(--eb-grey);"><span style="color: #333;">#CABEB5</span></div>
+                     <div class="color-swatch" style="background-color: var(--eb-orange);"><span>#F97838</span></div>
+                 </div>
+             </div>
+        </section>
+
+    </div> <!-- /container -->
+
+</body>
+</html>
